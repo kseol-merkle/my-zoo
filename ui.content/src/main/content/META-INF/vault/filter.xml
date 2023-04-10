@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/conf/zoo" mode="merge"/>
+    <filter root="/content/zoo" mode="merge"/>
+    <filter root="/content/dam/zoo/asset.jpg" mode="merge"/>
+    <filter root="/content/experience-fragments/zoo" mode="merge"/>
+</workspaceFilter>
