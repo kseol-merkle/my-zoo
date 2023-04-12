@@ -4,8 +4,8 @@
     let multifield = ".limit-multifield-items";
 
     let registry = $window.adaptTo("foundation-registry");
-    if(registry != null || registry != undefined) {
-        registry.register("foundation.adapters", {
+
+    registry.register("foundation.adapters", {
             type: "limit-multifield",
             selector: "coral-multifield", //this selector is in reference to the literal element <coral-multifield></coral-multifield>
             adapter: function(el) {
@@ -23,16 +23,15 @@
                     }
                 }
             }
-        });
-    }
+    });
 
-    $.validator.register("foundation.validation.validator", {
+    registry.register("foundation.validation.validator", {
         selector: "coral-multifield",
         validate: function(el) {
             let $this = $(el);
             let limitMultifield = $this.adaptTo("limit-multifield");
 
-            let totalPanels = el["0"].items.getAll().length;
+            let totalPanels = el.items.length;
             let min;
             let max;
 
@@ -53,5 +52,7 @@
             }
         }
     });
+
+
 
 })(document, window, Granite.$);
