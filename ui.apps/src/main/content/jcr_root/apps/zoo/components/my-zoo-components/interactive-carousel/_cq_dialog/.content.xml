@@ -22,7 +22,8 @@
                         sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
                         composite="{Boolean}true"
                         fieldDescription="Click 'Add' to add a new carousel item"
-                        fieldLabel="Image Items">
+                        fieldLabel="Image Items"
+                        granite:class="limit-multifield-items">
                         <granite:data
                             jcr:primaryType="nt:unstructured"
                             max-item="4"/>

@@ -26,7 +26,7 @@
     });
 
     registry.register("foundation.validation.validator", {
-        selector: "coral-multifield",
+        selector: multifield,
         validate: function(el) {
             let $this = $(el);
             let limitMultifield = $this.adaptTo("limit-multifield");
