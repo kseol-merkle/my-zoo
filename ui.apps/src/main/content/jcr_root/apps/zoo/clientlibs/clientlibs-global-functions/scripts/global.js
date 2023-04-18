@@ -1,10 +1,13 @@
+const multifield = ".limit-multifield-items";
 (function(document, window, $) {
     //want to test and achieve the use of the foundation registry adaptor.
+    console.log("inside of global js");
     let $window = $(window);
-    let multifield = ".limit-multifield-items";
+    //let multifield = ".limit-multifield-items";
 
     let registry = $window.adaptTo("foundation-registry");
 
+    //foundation adapters -- to adapt an HTML element to a different object, usually here to abstract a similar logic
     registry.register("foundation.adapters", {
             type: "limit-multifield",
             selector: "coral-multifield", //this selector is in reference to the literal element <coral-multifield></coral-multifield>
