@@ -1,0 +1,22 @@
+.heroslider__component {
+  background-color: lightskyblue;
+
+  >.heroslider__container {
+    max-width: 1200px;
+    width: 100%;
+    border: solid 2px red;
+    margin: auto;
+
+   >.heroslider {
+     display: flex;
+     flex-direction: row;
+     padding: 0;
+     list-style: none;
+
+     .heroslider__item1__image {
+       height: 500px;
+       width: 500px;
+     }
+   }
+  }
+}

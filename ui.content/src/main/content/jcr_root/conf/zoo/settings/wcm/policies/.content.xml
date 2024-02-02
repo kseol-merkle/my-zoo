@@ -335,7 +335,7 @@
                     jcr:primaryType="nt:unstructured"
                     jcr:title="Generic Page"
                     sling:resourceType="wcm/core/components/policy/policy"
-                    clientlibs="[zoo.dependencies]"
+                    clientlibs="[zoo.dependencies,zoo.site]"
                     clientlibsJsHead="zoo.dependencies">
                     <jcr:content jcr:primaryType="nt:unstructured"/>
                 </policy>
