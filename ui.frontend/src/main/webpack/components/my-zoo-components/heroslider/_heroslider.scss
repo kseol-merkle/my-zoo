@@ -1,22 +1,53 @@
 .heroslider__component {
   background-color: lightskyblue;
 
-  >.heroslider__container {
-    max-width: 1200px;
+  > .heroslider__container {
+    max-width: 1500px;
     width: 100%;
     border: solid 2px red;
     margin: auto;
 
-   >.heroslider {
-     display: flex;
-     flex-direction: row;
-     padding: 0;
-     list-style: none;
+    > .image-viewbox {
+      margin: auto;
+      overflow: hidden;
+    }
 
-     .heroslider__item1__image {
-       height: 500px;
-       width: 500px;
-     }
-   }
+    .heroslider {
+      display: flex;
+      flex-direction: row;
+      padding: 0;
+      list-style: none;
+      margin: 0;
+
+      &.--links-list {
+        position: relative;
+        top: -150px;
+        margin: 0 50px;
+      }
+
+      .heroslider__image {
+        height: 100%;
+        width: 1500px;
+      }
+
+      .heroslider__links {
+        flex: 1;
+        color: white;
+        font-size: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .heroslider__links-list {
+          list-style: none;
+          padding: 0;
+
+          a {
+            color: white;
+            text-decoration: none;
+          }
+        }
+      }
+    }
   }
 }

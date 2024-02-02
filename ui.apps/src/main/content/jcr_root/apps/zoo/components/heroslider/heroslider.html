@@ -2,18 +2,22 @@
 <sly data-sly-use.heroSlider="com.adobe.aem.poc.zoo.core.models.HeroSliderModel"></sly>
 <div class="heroslider__component">
     <div class="heroslider__container">
-        <ul class="heroslider --viewbox" data-sly-list.heroSliderList="${heroSlider.heroSliderList}">
-            <li class="heroslider__item1">
-                <img class="heroslider__item1__image"
-                     src="${heroSliderList.heroImage}"
-                     alt="${heroSliderList.imageAltText}">
-                <h3 class="heroslider__item1-title">${heroSliderList.title}</h3>
-                <ul class="heroslider__links-list"
-                    data-sly-list.heroSliderLinksList="${heroSliderList.slideLinksList}">
-                    <li class="heroslider__links">
-                        <a href="${heroSliderLinksList.linkPath @ extension='html'}">
-                            ${heroSliderLinksList.linkText}
-                        </a>
+        <div class="image-viewbox">
+            <ul class="heroslider --images --slider" data-sly-list.heroSliderList="${heroSlider.heroSliderList}">
+                <li class="heroslider__item">
+                    <img class="heroslider__image"
+                         src="${heroSliderList.heroImage}"
+                         alt="${heroSliderList.imageAltText}">
+                </li>
+            </ul>
+        </div>
+        <ul class="heroslider --links-list"
+            data-sly-list.heroSliderList="${heroSlider.heroSliderList}">
+            <li class="heroslider__links">
+                <h3 class="herosslider__links-title">${heroSliderList.title}</h3>
+                <ul class="heroslider__links-list" data-sly-list.heroSliderLinksList="${heroSliderList.slideLinksList}">
+                    <li class="heroslider__link-item">
+                        <a class="heroslider__link"ref="${heroSliderLinksList.linkPath @ extension='html'}">${heroSliderLinksList.linkText}</a>
                     </li>
                 </ul>
             </li>
