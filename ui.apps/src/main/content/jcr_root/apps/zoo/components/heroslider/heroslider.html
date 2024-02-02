@@ -1,0 +1,23 @@
+<div data-sly-use.placeholderTemplate="core/wcm/components/commons/v1/templates.html"></div>
+<sly data-sly-use.heroSlider="com.adobe.aem.poc.zoo.core.models.HeroSliderModel"></sly>
+<div class="heroslider__component">
+    <div class="heroslider__container">
+        <ul class="heroslider" data-sly-list.heroSliderList="${heroSlider.heroSliderList}">
+            <li class="heroslider__item1 --viewbox">
+                <img class="heroslider__item1__image"
+                     src="${heroSliderList.heroImage}"
+                     alt="${heroSliderList.imageAltText}">
+                <h3 class="heroslider__item1-title">${heroSliderList.title}</h3>
+                <ul class="heroslider__links-list"
+                    data-sly-list.heroSliderLinksList="${heroSliderList.slideLinksList}">
+                    <li class="heroslider__links">
+                        <a href="${heroSliderLinksList.linkPath @ extension='html'}">
+                            ${heroSliderLinksList.linkText}
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+<sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty=!dialogText}"></sly>
