@@ -1,48 +1,67 @@
-.heroslider__component {
-  background-color: lightskyblue;
+.cmp-heroslider {
+  background-color: transparent;
 
-  > .heroslider__container {
+  > .cmp-heroslider__container {
     max-width: 1500px;
     width: 100%;
     border: solid 2px red;
     margin: auto;
+    max-height: 944px;
+    height: 100%;
 
-    > .image-viewbox {
+    > .cmp-heroslider__viewfinder {
       margin: auto;
       overflow: hidden;
     }
 
-    .heroslider {
+    .cmp-heroslider__list {
       display: flex;
       flex-direction: row;
       padding: 0;
       list-style: none;
       margin: 0;
 
-      &.--links-list {
+      &.--images {
+        -webkit-transition: -webkit-transform .6s ease-in-out;
+        transition: -webkit-transform .6s ease-in-out;
+        transition: transform .6s ease-in-out,-webkit-transform .6s ease-in-out;
+      }
+
+      &.--links {
         position: relative;
         top: -150px;
         margin: 0 50px;
       }
 
-      .heroslider__image {
+      .cmp-heroslider__image {
         height: 100%;
         width: 1500px;
       }
 
-      .heroslider__links {
+      .cmp-heroslider__link-item {
         flex: 1;
         color: white;
         font-size: 20px;
         display: flex;
         flex-direction: column;
         align-items: center;
+        text-shadow: -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
 
-        .heroslider__links-list {
+        >.cmp-heroslider__link-title {
+          &:hover {
+            cursor: pointer;
+            color: yellow;
+          }
+        }
+
+        .cmp-heroslider__anchors {
           list-style: none;
           padding: 0;
 
-          a {
+          .cmp-heroslider__anchor {
             color: white;
             text-decoration: none;
           }
