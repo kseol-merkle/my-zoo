@@ -6,6 +6,7 @@ import org.apache.sling.models.annotations.DefaultInjectionStrategy;
 import org.apache.sling.models.annotations.Model;
 import org.apache.sling.models.annotations.injectorspecific.ChildResource;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Model(adaptables = Resource.class, defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL)
@@ -14,6 +15,6 @@ public class HeroSliderModel {
     private List<HeroSliderImagePojo> heroSliderList;
 
     public List<HeroSliderImagePojo> getHeroSliderList() {
-        return heroSliderList;
+        return new ArrayList<>(heroSliderList);
     }
 }
