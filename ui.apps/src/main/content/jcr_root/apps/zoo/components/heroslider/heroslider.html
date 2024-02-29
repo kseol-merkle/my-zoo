@@ -1,0 +1,31 @@
+<div data-sly-use.placeholderTemplate="core/wcm/components/commons/v1/templates.html"></div>
+<sly data-sly-use.heroSlider="com.adobe.aem.poc.zoo.core.models.HeroSliderModel"></sly>
+<div class="cmp-heroslider">
+    <div class="cmp-heroslider__container">
+        <div class="cmp-heroslider__viewfinder">
+            <ul class="cmp-heroslider__list --images"
+                data-sly-list.heroSliderList="${heroSlider.heroSliderList}">
+                <li class="cmp-heroslider__image-item ${herosliderListList.index == 0 ? '--active' : ''}"
+                data-index="${herosliderListList.index}">
+                    <img class="cmp-heroslider__image"
+                         src="${heroSliderList.heroImage}"
+                         alt="${heroSliderList.imageAltText}">
+                </li>
+            </ul>
+
+            <ul class="cmp-heroslider__list --links"
+                data-sly-list.heroSliderList="${heroSlider.heroSliderList}">
+                <li class="cmp-heroslider__link-item ${herosliderListList.index == 0 ? '--active' : ''}"
+                    data-index="${herosliderListList.index}">
+                    <h3 class="cmp-heroslider__link-title">${heroSliderList.title}</h3>
+                    <ul class="cmp-heroslider__anchors" data-sly-list.heroSliderLinksList="${heroSliderList.slideLinksList}">
+                        <li class="cmp-heroslider__anchor-item">
+                            <a class="cmp-heroslider__anchor" href="${heroSliderLinksList.linkPath @ extension='html'}">${heroSliderLinksList.linkText}</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty=!dialogText}"></sly>
